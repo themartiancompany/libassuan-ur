@@ -8,7 +8,11 @@ pkgrel=1
 pkgdesc='IPC library used by some GnuPG related software'
 arch=(x86_64)
 url="https://www.gnupg.org/related_software/libassuan/"
-license=(GPL3)
+license=(
+  FSFULLR
+  GPL-2.0-or-later
+  LGPL-2.1-or-later
+)
 depends=(
   glibc
   libgpg-error
