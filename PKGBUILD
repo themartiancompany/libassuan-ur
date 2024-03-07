@@ -9,7 +9,11 @@ pkgdesc='IPC library used by some GnuPG related software'
 arch=(x86_64)
 url="https://www.gnupg.org/related_software/libassuan/"
 license=(GPL3)
-depends=(glibc libgpg-error sh)
+depends=(
+  glibc
+  libgpg-error
+  sh
+)
 provides=(libassuan.so)
 source=(https://gnupg.org/ftp/gcrypt/${pkgname}/${pkgname}-${pkgver}.tar.bz2{,.sig})
 sha512sums=('dcca942d222a2c226a7e34ba7988ee0c3c55bd6032166eb472caf2053db89aeeea7a40e93d8c2887c7ee73c5f838e8b0725e8cfb595accc1606646559362f7ee'
