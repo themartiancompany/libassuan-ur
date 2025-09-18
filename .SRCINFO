@@ -7,17 +7,15 @@ pkgbase = libassuan
 	license = FSFULLR
 	license = GPL-2.0-or-later
 	license = LGPL-2.1-or-later
+	makedepends = git
 	depends = glibc
 	depends = libgpg-error
 	depends = sh
 	provides = libassuan.so
-	source = https://gnupg.org/ftp/gcrypt/libassuan/libassuan-3.0.0.tar.bz2
-	source = https://gnupg.org/ftp/gcrypt/libassuan/libassuan-3.0.0.tar.bz2.sig
+	source = git+https://dev.gnupg.org/source/libassuan.git?signed#tag=libassuan-3.0.0
 	validpgpkeys = 6DAA6E64A76D2840571B4902528897B826403ADA
 	validpgpkeys = AC8E115BF73E2D8D47FA9908E98E9B2D19C6C8BD
-	sha512sums = 7c5c95c1b85bef2d4890c068a5a8ea8a1fe0d8def6ab09e5f34fc2746d8808bbb0fc168e3bd66d52ee5ed799dcf9f258f4125cda98c8384f6411bcad8d8b3139
-	sha512sums = SKIP
-	b2sums = c86f7d62413c6f7a228deb47abe0388790a7c0e3c89b5ee7a7a72f72bea6502d5cbe199b10f06efc885af6fefab358dbe0e61a6f798493dcfcc63df0cfacdb55
-	b2sums = SKIP
+	sha512sums = 4b118ce0e45596836e7c1eb4d784c297a9080c2ae7a1deee6e1dc526177b6a637fe5234651565f3a923906e64de84b7f4e92a370533953a9d1ea9d22ec3ed46b
+	b2sums = d6f007d0b15b3871b0a12d51a768f5634e4617c1c2ee84b7823ef6fe98d09691f200901f52cd6654d5eefd2978116cb78f99333f2914895d23ec35e61bbb2719
 
 pkgname = libassuan
