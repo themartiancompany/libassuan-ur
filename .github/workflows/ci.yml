@@ -1397,12 +1397,12 @@ jobs:
           Gets recipe-get.
         run: |
           uname \
-            -m
+            -o
           pacman \
-            -Qi \
+            -Si \
             "gcc"
           pacman \
-            -Qi \
+            -Si \
             "gcc-libs"
           pacman \
             -Ss \
