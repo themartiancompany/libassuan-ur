@@ -41,10 +41,12 @@ if [[ "${_os}" == "Android" ]]; then
   _libc="ndk-sysroot"
   _compiler="clang"
   _libcompiler="llvm-libs"
+  _sh="dash"
 elif [[ "${_os}" == "GNU/Linux" ]]; then
   _libc="glibc"
   _compiler="gcc"
   _libcompiler="libgcc"
+  _sh="sh"
 fi
 _evmfs_available="$(
   command \
@@ -98,7 +100,7 @@ license=(
 depends=(
   "${_libc}"
   "libgpg-error"
-  "sh"
+  "${_sh}"
 )
 makedepends=(
   "${_libc}"
