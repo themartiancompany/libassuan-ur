@@ -1402,6 +1402,21 @@ jobs:
           rm \
             -rf \
             "${HOME}/fur"
+      - name:
+          Installs build dependencies.
+        run: |
+          export \
+            _pkgs=(
+            $(_evmfs="false" \
+              _evmfs="false" \
+              recipe-get \
+                "PKGBUILD" \
+                "makedepends")
+          )
+          pacman \
+            -S \
+            --noconfirm \
+            "${_pkgs[@]}"
       # - name:
       #     Installs Rust.
       #   run: |
