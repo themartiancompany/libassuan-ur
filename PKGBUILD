@@ -48,7 +48,8 @@ elif [[ "${_os}" == "GNU/Linux" ]]; then
   _libcompiler="libgcc"
   _sh="sh"
 elif [[ "${_os}" == "Windows" ]]; then
-  _libc="glibc"
+  _libc="msys2-w32api-runtime"
+  _libc_headers="msys2-w32api-headers"
   _compiler="gcc"
   _libcompiler="gcc-libs"
   _sh="sh"
@@ -58,7 +59,8 @@ else
   )
   msg \
     "${_msg[*]}"
-  _libc="glibc"
+  _libc="msys2-w32api-runtime"
+  _libc_headers="msys2-w32api-headers"
   _compiler="gcc"
   _libcompiler="gcc-libs"
   _sh="sh"
@@ -125,6 +127,12 @@ makedepends=(
   "${_compiler}"
   "texinfo"
 )
+if [[ "${_os}" == "Windows" ]]; then
+  makedepends+=(
+    "${_libc_headers}"
+  )
+else
+fi
 if [[ "${_git}" == "true" ]]; then
   makedepends+=(
     "git"
