@@ -1385,8 +1385,10 @@ jobs:
               "https://github.com/themartiancompany/crash-bash"
           cd \
             "crash-bash"
+          mkdir \
+            -p \
+            "/usr/lib/libcrash-bash"
           make \
-            DESTDIR="/" \
             PREFIX="/usr" \
             install
       - name:
