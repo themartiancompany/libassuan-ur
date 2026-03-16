@@ -761,9 +761,9 @@ jobs:
             ${{ github.event.release.upload_url }}
             # ${{ steps.create_release.outputs.upload_url }}
           asset_path:
-            libassuan-${{ steps.version.outputs.version }}-any.pkg.tar.xz
+            libassuan-${{ steps.version.outputs.version }}-${{ matrix.env }}.pkg.tar.xz
           asset_name:
-            dogeos-android-libassuan-${{ steps.version.outputs.version }}-any.pkg.tar.xz
+            dogeos-android-libassuan-${{ steps.version.outputs.version }}-${{ matrix.env }}.pkg.tar.xz
           asset_content_type:
             application/gzip
   arch_release:
@@ -1328,9 +1328,9 @@ jobs:
             ${{ github.event.release.upload_url }}
             # ${{ steps.create_release.outputs.upload_url }}
           asset_path:
-            libassuan-${{ steps.version.outputs.version }}-any.pkg.tar.xz
+            libassuan-${{ steps.version.outputs.version }}-${{ matrix.env }}.pkg.tar.xz
           asset_name:
-            dogeos-gnu-libassuan-${{ steps.version.outputs.version }}-any.pkg.tar.xz
+            dogeos-gnu-libassuan-${{ steps.version.outputs.version }}-${{ matrix.env }}.pkg.tar.xz
           asset_content_type:
             application/gzip
   msys2_release:
@@ -1607,9 +1607,9 @@ jobs:
             ${{ github.event.release.upload_url }}
             # ${{ steps.create_release.outputs.upload_url }}
           asset_path:
-            libassuan-${{ steps.version.outputs.version }}-any.pkg.tar.xz
+            libassuan-${{ steps.version.outputs.version }}-${{ matrix.env }}.pkg.tar.xz
           asset_name:
-            dogeos-windows-libassuan-${{ steps.version.outputs.version }}-any.pkg.tar.xz
+            dogeos-windows-libassuan-${{ steps.version.outputs.version }}-${{ matrix.env }}.pkg.tar.xz
           asset_content_type:
             application/gzip
 
