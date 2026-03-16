@@ -1437,14 +1437,17 @@ jobs:
       - name:
           Installs build dependencies.
         run: |
+          _evmfs="false" \
+            "recipe-get" \
+              "PKGBUILD" \
+              "makedepends" || \
+            true
           export \
             _pkgs=(
             $(_evmfs="false" \
-              _evmfs="false" \
-              bash \
-                "reallymakepkg/reallymakepkg/recipe-get" \
-                  "PKGBUILD" \
-                  "makedepends")
+              "recipe-get" \
+                "PKGBUILD" \
+                "makedepends")
           )
           pacman \
             -S \
