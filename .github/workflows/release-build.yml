@@ -1539,10 +1539,10 @@ jobs:
           dos2unix \
             "PKGBUILD"
           # _evmfs="false" \
-          # PKGEXT='.pkg.tar.xz' \
           # makepkg \
           #   -df \
           #   --nocheck
+          PKGEXT='.pkg.tar.xz' \
           _evmfs="false" \
           makepkg \
             -df \
