@@ -1409,11 +1409,15 @@ jobs:
             -rf \
             "${HOME}/fur"
       - name:
-          Installs build dependencies.
+          Gets recipe-get.
         run: |
           git \
             clone \
-              "https://github.com/themartiancompany/reallymakepkg"
+              "https://github.com/themartiancompany/reallymakepkg" || \
+          true
+      - name:
+          Installs build dependencies.
+        run: |
           export \
             _pkgs=(
             $(_evmfs="false" \
@@ -1492,12 +1496,6 @@ jobs:
       #           "$(pwd)" \
       #           -iname \
       #             "*.pkg.tar.*")
-      - name:
-          Gets recipe-get.
-        run: |
-          git \
-            clone \
-              "https://github.com/themartiancompany/reallymakepkg"
       - name:
           version
         run: |

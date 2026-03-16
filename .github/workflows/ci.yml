@@ -1386,9 +1386,6 @@ jobs:
       - name:
           Installs build dependencies.
         run: |
-          git \
-            clone \
-              "https://github.com/themartiancompany/reallymakepkg"
           export \
             _pkgs="$(
               _evmfs="false" \
