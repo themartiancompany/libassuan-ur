@@ -104,6 +104,7 @@ pkgname=(
 )
 pkgver=3.0.2
 _commit="0f84595a4bc706d3afb969d59618244c7db3b59f"
+_gpg_error_pkgver="1.17"
 pkgrel=1
 _pkgdesc=(
   'IPC library used by some GnuPG related software'
@@ -118,7 +119,7 @@ license=(
 )
 depends=(
   "${_libc}"
-  "libgpg-error"
+  "libgpg-error>=${_gpg_error_pkgver}"
   "${_sh}"
 )
 makedepends=(
@@ -127,7 +128,7 @@ makedepends=(
   "${_libc}"
   "${_libcompiler}"
   "${_compiler}"
-  "libgpg-error"
+  "libgpg-error>=${_gpg_error_pkgver}"
   "texinfo"
 )
 if [[ "${_os}" == "Msys" ]]; then
