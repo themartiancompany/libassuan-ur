@@ -127,6 +127,7 @@ makedepends=(
   "${_libc}"
   "${_libcompiler}"
   "${_compiler}"
+  "libgpg-error"
   "texinfo"
 )
 if [[ "${_os}" == "Msys" ]]; then
