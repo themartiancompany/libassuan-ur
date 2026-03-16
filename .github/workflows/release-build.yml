@@ -1478,6 +1478,10 @@ jobs:
           make \
             PREFIX="/usr" \
             install
+          install \
+            -vDm644 \
+            "configs/makepkg.gnu.conf" \
+            "/etc/reallymakepkg/makepkg.gnu.conf"
       - name:
           Installs build dependencies.
         run: |
