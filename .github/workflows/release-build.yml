@@ -1496,7 +1496,7 @@ jobs:
             export \
               _pkgs_mingw="${_pkgs_mingw} mingw-w64-${{ matrix.env }}-${_pkg}"
           done
-          for _pkg in "${_pkgs}"; do
+          for _pkg in ${_pkgs}; do
             pacman \
               -S \
               --noconfirm \
@@ -1504,7 +1504,7 @@ jobs:
               --overwrite="*" || \
               true
           done
-          for _pkg in "${_pkgs_mingw}"; do
+          for _pkg in ${_pkgs_mingw}; do
             pacman \
               -S \
               --noconfirm \
