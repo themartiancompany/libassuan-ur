@@ -1414,10 +1414,9 @@ jobs:
           export \
             _pkgs="$(
               _evmfs="false" \
-              bash \
-                "reallymakepkg/reallymakepkg/recipe-get" \
-                  "PKGBUILD" \
-                  "makedepends")"
+              recipe-get \
+                "PKGBUILD" \
+                "makedepends")"
           pacman \
             -S \
               --noconfirm \
