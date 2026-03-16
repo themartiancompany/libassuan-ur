@@ -600,7 +600,8 @@ jobs:
             pacman \
               -Udd \
               --noconfirm \
-              "${HOME}/fur/termux/any/"*".pkg.tar."*
+              "${HOME}/fur/termux/any/"*".pkg.tar."* \
+              --overwrite="*"
           /entrypoint.sh \
             rm \
               -rf \

@@ -614,6 +614,49 @@ jobs:
           #     install \
           #     "meson"
       - name:
+          Installs Termux Keyring.
+        run: |
+          /entrypoint.sh \
+            fur \
+              -v \
+              -p \
+                "pacman" \
+              -d \
+              "termux-keyring"
+          /entrypoint.sh \
+            rm \
+              "${HOME}/fur/termux/any/"*".pkg.tar."*".sig"
+          /entrypoint.sh \
+            pacman \
+              -Udd \
+              --noconfirm \
+              "${HOME}/fur/termux/any/"*".pkg.tar."* \
+              --overwrite="*"
+          /entrypoint.sh \
+            rm \
+              -rf \
+              "${HOME}/fur"
+          /entrypoint.sh \
+            pacman-key \
+              --init || \
+            true
+      - name:
+          Installs build dependencies.
+        run: |
+          export \
+            _pkgs="$(
+              _evmfs="false" \
+              recipe-get \
+                "PKGBUILD" \
+                "makedepends")"
+          SHELL="bash" \
+          /entrypoint.sh \
+            pacman \
+              -S \
+                --noconfirm \
+                jq \
+                ${_pkgs}
+      - name:
           Builds the package.
         run: |
           /entrypoint.sh \
