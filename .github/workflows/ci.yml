@@ -607,7 +607,7 @@ jobs:
           export \
             _sig_enabled="SigLevel    = Required DatabaseOptional"
           export \
-            _sig_disabled="SigLevel    = DatabaseOptional"
+            _sig_disabled="SigLevel    = Optional"
           /entrypoint.sh \
             sed \
               -i \
