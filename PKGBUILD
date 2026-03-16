@@ -110,7 +110,14 @@ _pkgdesc=(
   'IPC library used by some GnuPG related software'
 )
 pkgdesc="${_pkgdesc[*]}"
-arch=(x86_64)
+arch=(
+  "aarch64"
+  "arm"
+  "armv7l"
+  "i686"
+  "mips"
+  "x86_64"
+)
 url="https://www.gnupg.org/related_software/${_pkg}"
 license=(
   "FSFULLR"
