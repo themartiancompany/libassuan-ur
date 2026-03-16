@@ -604,13 +604,13 @@ jobs:
           # One needs to manually install the
           # termux-keyring pacman package if
           # in the Termux Debian environment.
-          # /entrypoint.sh \
-          #   pacman \
-          #     -Sy \
-          #     termux-keyring
-          # /entrypoint.sh \
-          #   pacman-key \
-          #     --init
+          /entrypoint.sh \
+            pacman \
+              -Sy \
+              termux-keyring
+          /entrypoint.sh \
+            pacman-key \
+              --init
           # /entrypoint.sh \
           #   pip \
           #     install \
