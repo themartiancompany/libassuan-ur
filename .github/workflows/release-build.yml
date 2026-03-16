@@ -1503,14 +1503,14 @@ jobs:
           Installs build dependencies.
         run: |
           _evmfs="false" \
-            "recipe-get" \
+            recipe-get \
               "PKGBUILD" \
               "makedepends" || \
             true
           export \
             _pkgs="$( \
               _evmfs="false" \
-              "recipe-get" \
+              recipe-get \
                 "PKGBUILD" \
                 "makedepends")"
           for _pkg in ${_pkgs}; do
@@ -1592,14 +1592,12 @@ jobs:
             "::set-output name=version::$( \
             export \
               _evmfs="false" && \
-            bash \
-              "reallymakepkg/reallymakepkg/recipe-get" \
+              recipe-get \
                 "PKGBUILD" \
                 "pkgver")-$( \
             export \
               _evmfs="false" && \
-            bash \
-              "reallymakepkg/reallymakepkg/recipe-get" \
+              recipe-get \
                 "PKGBUILD" \
                 "pkgrel")"
         id:
