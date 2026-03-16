@@ -106,6 +106,7 @@ makedepends=(
   "${_libc}"
   "${_libcompiler}"
   "${_compiler}"
+  "texinfo"
 )
 if [[ "${_git}" == "true" ]]; then
   makedepends+=(
