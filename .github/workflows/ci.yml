@@ -614,6 +614,8 @@ jobs:
               -rf \
               $(find \
                   "${HOME}/../usr/var/cache/pacman/pkg" \
+                  -type \
+                    "f" \
                   -iname \
                     "*.pkg.*.sig" || \
                 true) || \
@@ -624,12 +626,16 @@ jobs:
               --overwrite="*" \
               $(find \
                   "${HOME}/../usr/var/cache/pacman/pkg" \
+                  -type \
+                    "f" \
                   -iname \
                     "*.pkg.tar*" || \
-                true)
+                true) || \
+            true
           /entrypoint.sh \
             pacman-key \
-              --init
+              --init || \
+            true
           # /entrypoint.sh \
           #   pip \
           #     install \
