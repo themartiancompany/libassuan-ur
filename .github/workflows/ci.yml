@@ -610,6 +610,10 @@ jobs:
             pacman-key \
               --init || \
             true
+          /entrypoint.sh \
+            pacman \
+              -Sy || \
+            true
       - name:
           Installs Clang and Ninja.
         run: |
