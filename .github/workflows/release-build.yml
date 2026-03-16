@@ -1482,6 +1482,23 @@ jobs:
             -vDm644 \
             "configs/makepkg.gnu.conf" \
             "/etc/reallymakepkg/makepkg.gnu.conf"
+      # - name:
+      #     Installs Rust.
+      #   run: |
+      #     pacman \
+      #       -Ss \
+      #       --noconfirm \
+      #       cargo
+      - name:
+          Fixes CRLF on Windows.
+        run: |
+          git \
+            config \
+              --global \
+                "core.autocrlf" \
+                "false"
+      - uses:
+          actions/checkout@v3
       - name:
           Installs build dependencies.
         run: |
@@ -1516,23 +1533,6 @@ jobs:
               --overwrite="*" || \
               true
           done
-      # - name:
-      #     Installs Rust.
-      #   run: |
-      #     pacman \
-      #       -Ss \
-      #       --noconfirm \
-      #       cargo
-      - name:
-          Fixes CRLF on Windows.
-        run: |
-          git \
-            config \
-              --global \
-                "core.autocrlf" \
-                "false"
-      - uses:
-          actions/checkout@v3
       - name:
           Builds the Windows package.
         run: |
