@@ -621,6 +621,7 @@ jobs:
           /entrypoint.sh \
             pacman \
               -Udd \
+              --overwrite="*" \
               $(find \
                   "${HOME}/../usr/var/cache/pacman/pkg" \
                   -iname \
