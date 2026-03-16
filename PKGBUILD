@@ -51,6 +51,7 @@ elif [[ "${_os}" == "Windows" ]]; then
   _libc="glibc"
   _compiler="gcc"
   _libcompiler="gcc-libs"
+  _sh="sh"
 else
   _msg=(
     "Unknown os '${_os}'."
@@ -60,6 +61,7 @@ else
   _libc="glibc"
   _compiler="gcc"
   _libcompiler="gcc-libs"
+  _sh="sh"
 fi
 _evmfs_available="$(
   command \
