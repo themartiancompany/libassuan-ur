@@ -47,6 +47,10 @@ elif [[ "${_os}" == "GNU/Linux" ]]; then
   _compiler="gcc"
   _libcompiler="libgcc"
   _sh="sh"
+elif [[ "${_os}" == "Windows" ]]; then
+  _libc="glibc"
+  _compiler="gcc"
+  _libcompiler="gcc-libs"
 fi
 _evmfs_available="$(
   command \

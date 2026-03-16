@@ -1391,6 +1391,8 @@ jobs:
           make \
             PREFIX="/usr" \
             install
+          cd \
+            ".."
       - name:
           Gets recipe-get.
         run: |
@@ -1402,6 +1404,8 @@ jobs:
           make \
             PREFIX="/usr" \
             install
+          cd \
+           ".."
       - name:
           Installs build dependencies.
         run: |
