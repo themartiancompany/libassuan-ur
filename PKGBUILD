@@ -103,6 +103,7 @@ depends=(
   "${_sh}"
 )
 makedepends=(
+  "autoconf"
   "automake"
   "${_libc}"
   "${_libcompiler}"
