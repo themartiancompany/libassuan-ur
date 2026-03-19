@@ -86,7 +86,7 @@ if [[ ! -v "_git_service" ]]; then
   _git_service="github"
 fi
 if [[ ! -v "_git_http" ]]; then
-  _git_http="${_git_http}"
+  _git_http="${_git_service}"
 fi
 if [[ ! -v "_ns" ]]; then
   _ns="themartiancompany"
