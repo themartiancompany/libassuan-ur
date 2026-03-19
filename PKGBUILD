@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0
+      "\n"
 
 #    ----------------------------------------------------------------------
 #    Copyright © 2022, 2023, 2024, 2025  Pellegrino Prevete
@@ -114,7 +115,7 @@ pkgname=(
 pkgver=3.0.2
 _commit="0f84595a4bc706d3afb969d59618244c7db3b59f"
 _gpg_error_pkgver="1.17"
-pkgrel=20
+pkgrel=21
 _pkgdesc=(
   'IPC library used by some GnuPG related software'
 )
