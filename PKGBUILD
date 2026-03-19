@@ -82,6 +82,15 @@ fi
 if [[ ! -v "_git" ]]; then
   _git="true"
 fi
+if [[ ! -v "_git_service" ]]; then
+  _git_service="github"
+fi
+if [[ ! -v "_git_http" ]]; then
+  _git_http="${_git_http}"
+fi
+if [[ ! -v "_ns" ]]; then
+  _ns="themartiancompany"
+fi
 if [[ ! -v "_archive_format" ]]; then
   if [[ "${_git}" == "true" ]]; then
     if [[ "${_evmfs}" == "true" ]]; then
@@ -105,7 +114,7 @@ pkgname=(
 pkgver=3.0.2
 _commit="0f84595a4bc706d3afb969d59618244c7db3b59f"
 _gpg_error_pkgver="1.17"
-pkgrel=17
+pkgrel=18
 _pkgdesc=(
   'IPC library used by some GnuPG related software'
 )
@@ -118,6 +127,7 @@ arch=(
   "mips"
   "x86_64"
 )
+_git_http_uri="https://${_git_http}.com/${_ns}/${_pkg}"
 url="https://www.gnupg.org/related_software/${_pkg}"
 license=(
   "FSFULLR"
@@ -154,6 +164,10 @@ provides=(
 )
 _url="https://dev.gnupg.org/source/${_pkg}"
 if [[ "${_git}" == "true" ]]; then
+  if [[ "${_git_service}" == "github" || \
+        "${_git_service}" == "gitlab" ]]; then
+    _url="${_git_http_uri}"
+  fi
   _tag_name="commit"
   if [[ "${_tag_name}" == "commit" ]]; then
     _tag="${_commit}"
