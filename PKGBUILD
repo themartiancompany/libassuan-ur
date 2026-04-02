@@ -194,8 +194,8 @@ _tarname="${_pkg}-${_tag}"
 _tarfile="${_pkg}-${_tag}.${_archive_format}"
 _gitlab_sum="SKIP"
 _gitlab_sig_sum="SKIP"
-_github_sum="boh"
-_github_sig_sum="boh"
+_github_sum="a9cd20f2b8d29406470411e883443b0e124606f83f39ac08ee8b21d0eb6a234f"
+_github_sig_sum="b067cf7b6e1dd987ca91391e90923a73c3064212b3e9466ecd895000779642b4"
 _bundle_sum="SKIP"
 _bundle_sig_sum="SKIP"
 # Dvorak
@@ -347,5 +347,3 @@ package() {
     -t \
     "${pkgdir}/usr/share/doc/${pkgname}/"
 }
-a9cd20f2b8d29406470411e883443b0e124606f83f39ac08ee8b21d0eb6a234f  libassuan-0f84595a4bc706d3afb969d59618244c7db3b59f.zip
-b067cf7b6e1dd987ca91391e90923a73c3064212b3e9466ecd895000779642b4  libassuan-0f84595a4bc706d3afb969d59618244c7db3b59f.zip.sig
