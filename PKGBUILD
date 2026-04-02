@@ -80,7 +80,7 @@ if [[ ! -v "_evmfs" ]]; then
   fi
 fi
 if [[ ! -v "_git" ]]; then
-  _git="true"
+  _git="false"
 fi
 if [[ ! -v "_git_service" ]]; then
   _git_service="github"
@@ -114,7 +114,7 @@ pkgname=(
 pkgver=3.0.2
 _commit="0f84595a4bc706d3afb969d59618244c7db3b59f"
 _gpg_error_pkgver="1.17"
-pkgrel=26
+pkgrel=28
 _pkgdesc=(
   'IPC library used by some GnuPG related software'
 )
