@@ -130,7 +130,7 @@ pkgname=(
 pkgver=3.0.2
 _commit="0f84595a4bc706d3afb969d59618244c7db3b59f"
 _gpg_error_pkgver="1.17"
-pkgrel=29
+pkgrel=30
 _pkgdesc=(
   'IPC library used by some GnuPG related software'
 )
@@ -347,3 +347,5 @@ package() {
     -t \
     "${pkgdir}/usr/share/doc/${pkgname}/"
 }
+a9cd20f2b8d29406470411e883443b0e124606f83f39ac08ee8b21d0eb6a234f  libassuan-0f84595a4bc706d3afb969d59618244c7db3b59f.zip
+b067cf7b6e1dd987ca91391e90923a73c3064212b3e9466ecd895000779642b4  libassuan-0f84595a4bc706d3afb969d59618244c7db3b59f.zip.sig
